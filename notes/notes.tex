@@ -1,0 +1,66 @@
+% setup the document
+\documentclass[b5paper,openany]{book}
+
+% setup variables ------------------------------
+
+% your name
+\newcommand\instructor{Mark Wales}
+
+% the week number
+\newcommand\weekno{9}
+
+% week main title
+\newcommand\maintitle{Building UIs}
+
+% week subtitle
+\newcommand\subtitle{with React}
+
+% link to notes - relative to github.com/develop-me/
+\newcommand\github{week-09--react/blob/master/notes/}
+
+% setup functions, styling, etc.
+\input{../../templates/template.tex}
+
+% the structure of the document
+\begin{document}
+
+% render the title page (uses variables above)
+\tp
+
+\quotepage{Success consists of going from failure to failure without loss of enthusiasm.}{Winston Churchill}
+
+\tableofcontents
+
+\input{../../templates/preface.tex}
+
+\chapter{React}
+\input{01/01-setup.tex}
+
+\chapter{JSX}
+\input{01/02-jsx.tex}
+
+\chapter{Props}
+\input{01/03-props.tex}
+
+\chapter{Events \& State}
+\input{02/01-state.tex}
+
+\chapter{Controlled Components}
+\input{03/01-forms.tex}
+
+\chapter{Lifting State}
+\input{03/02-lifting-state.tex}
+
+\chapter{React Router}
+\input{04/01-router.tex}
+
+\chapter{Deploying a React App}
+\input{04/deploying.tex}
+
+\nchapter{Glossary}
+\input{glossary.tex}
+
+
+\input{../../templates/colophon.tex}
+
+\end{document}

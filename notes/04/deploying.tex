@@ -1,0 +1,9 @@
+\label{deployment}
+
+If you've used \texttt{npm init react-app}, you can simply run \texttt{npm build} to create a copy of your site that you can run on any server. It will create a directory called \texttt{build} that contains an \texttt{index.html} file and the fully compressed and transpiled JS.
+\\
+
+You'll need to rerun \texttt{npm build} every time you want to publish a new version of the site - it doesn't keep itself up to date.
+\\
+
+You shouldn't add the \texttt{build} directory to Git, as it's easy to recreate by just running \texttt{npm build}.
