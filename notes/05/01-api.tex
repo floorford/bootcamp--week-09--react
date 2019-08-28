@@ -1,8 +1,230 @@
+If a React app needs to work with data that's stored on a server somewhere, it will need to make API calls.
 
+
+\section{AJAX}
+
+So far the only way we know to get data in the browser is to navigate to a new page and the only way to submit data is to create a form with a \texttt{POST} method. Both of these involve refreshing the page, which is no good for an app that runs purely in JavaScript.
+\\
+
+
+``AJAX'' (\textbf{Asynchronous JavaScript and XML}) is an outdated term for doing HTTP requests using JavaScript.
+\\
+
+The name comes from the pre-JSON era, when people still used XML to transfer data:
+
+\begin{minted}{xml}
+    <employees>
+        <employee>
+            <name>Jenny</name>
+            <email>jenny1987@gmail.com</email>
+        </employee>
+        <employee>
+            <name>Rahul</name>
+            <email>rahul12@gmail.com</email>
+        </employee>
+        <employee>
+            <name>Mia</name>
+            <email>mia87@gmail.com</email>
+        </employee>
+    </employees>
+\end{minted}
+
+As you can see, XML is verbose and repetitive. Nowadays JSON is used pretty much everywhere. So it should really be called ``AJAJ'', but that doesn't sound as cool.
+\\
+
+In any case, people still say ``AJAX'' when they're talking about JavaScript making HTTP requests.
+
+
+\section{Axios}
+
+There are various ways to make an AJAX request from the browser.
+\\
+
+The original method, \texttt{XMLHttpRequest}, is horrifying to use, as it pre-dates the time when people realised that JavaScript didn't have to be unpleasant to work with.
+\\
+
+The more modern \texttt{fetch} API is much nicer to work with and is \href{https://caniuse.com/#feat=fetch}{now supported in most browsers}. However, it's still a bit ungainly to work with.
+\\
+
+We'll be using \href{https://github.com/mzabriskie/axios}{Axios} for our HTTP requests. It's a handy library that makes doing HTTP requests with JavaScript really easy.\footnote{And, as an added bonus, it works in Node too.}
+\\
+
+You can install it with:
+
+\begin{minted}{js}
+    npm install axios
+\end{minted}
+
+Axios provides us with methods for the various HTTP methods:
+
+\begin{minted}{js}
+    import axios from "axios";
+
+    // make a GET request
+    axios.get("/articles");
+
+    // make a POST request, with the given data
+    axios.post("/articles", {
+        title: "Hello",
+        article: "Blah blah blah",
+        tags: ["fish", "cat", "spoon"],
+    });
+
+    // make a PUT request, with the given data
+    axios.put("/articles/5", {
+        title: "Hello Again",
+        article: "Blah blah blah!",
+        tags: ["fish", "cat"],
+    });
+
+    // make a DELETE request
+    axios.delete("/articles/4");
+\end{minted}
+
+
+\subsection{Config}
+
+One of Axios' best features is it's easy to configure the parts of your HTTP request that are the same every time.
+\\
+
+For example, if we're using a RESTful API, our base URL, API key, and the \texttt{Accept} header are going to be the same for every request, so we can setup a version of Axios that has those already setup:
+
+\begin{minted}{js}
+    // import the library version of axios
+    import axios from "axios";
+
+    // create a version of axios with useful defaults
+    export default axios.create({
+        // use your own url
+        baseURL: "http://username.restful.training/api/",
+
+        // use your own key
+        params: {"key": "4fdea06a65ba1491091c0db709faf0cce944067a"},
+
+        // make sure we get JSON back
+        headers: {"Accept": "application/json"},
+    });
+\end{minted}
+
+Then we can import \textit{that} file and use it as follows:
+
+\begin{minted}{js}
+    // import *local* version of axios
+    import axios from "./axios";
+
+    // automatically handle base URL and key
+    axios.get("/articles");
+\end{minted}
+
+
+
+\section{Asynchronous Programming}
+
+When we make a request to the API we don't get a response straight away. Even on a fast connection it can take 100ms or more to get a response. That might not sound like a long time, but for a computer that's ages.
+\\
+
+So, JavaScript doesn't just stop doing everything until you get a response back: it keeps on doing whatever else needs to be done until it gets a response.
+\\
+
+When we don't get back a response immediately, we need to deal with the response \textbf{asynchronously}: in other words, the code that runs when the response comes back could run at \textit{any time} in the future (or never).  We've actually dealt with a similar concept when we wrote event handlers.
+
+
+\section{Promises}
+
+So, when we make a request with Axios, we can't be given back the response to store in a variable, as the response doesn't exist yet. What we get back instead is a \textbf{Promise}.
+\\
+
+A Promise is an object with a \texttt{.then()} method. We can pass the \texttt{.then()} method a function, which will run once the response comes back. With Axios, the function will be passed the response as the first parameter.
+
+\begin{minted}{js}
+    // make the request
+    let promise = axios.get("/articles");
+
+    // setup the handler for when the response is successful
+    promise.then(response => {
+        console.log(response);
+    });
+\end{minted}
+
+Rather than using an intermediary variable, generally we use chaining with Promises:
+
+\begin{minted}{js}
+    // use destructuring to get the data property
+    axios.get("/articles").then(({ data }) => {
+        console.log(data);
+    });
+\end{minted}
+
+Be aware that \textbf{there's no guarantee the promises will resolve in the order you wrote them}. For example, \texttt{GET} requests tend to be quicker than other types of request as they generally involve less server activity.
+
+
+\subsection{Errors}
+
+Sometimes things will go wrong: you might have sent invalid data, the API server might be down, or any number of other issues.
+\\
+
+The \texttt{.then()} method of a Promise actually accepts a second argument which will be called if something goes wrong.
+
+\begin{minted}{js}
+    axios.get("/articles").then(response => {
+        console.log("Everything has worked");
+    }, error => {
+        console.log(error); // logs an error message
+        console.log(error.response); // the response object
+        console.log("Something has gone wrong");
+    });
+\end{minted}
+
+Alternatively you can use the \texttt{.catch()} method:
+
+\begin{minted}{js}
+    axios.get("/articles").then(response => {
+        console.log("Everything has worked");
+    }).catch(error => {
+        console.log("Something has gone wrong", error.response);
+    });
+\end{minted}
+
+You could use the above methods to handle form validation errors and the like.
+
+
+\section{Lifecycle Methods}
+
+We can put API calls in our component methods, we just need to make sure that we use \texttt{this.setState()} \textit{inside} the \texttt{.then()} function:
+
+\begin{minted}{js}
+    handleSubmit() {
+        // get the values of some controlled components
+        let { title, article } = this.state;
+
+        // post data to an API
+        axios.post("/api/article", {
+            title: title,
+            article: article,
+        }).then(() => {
+            // once the server gets responds successfully, clear the inputs
+            this.setState({ title: "", article: "" });
+        });
+    }
+\end{minted}
+
+If we're going to \textit{fetch} data from an API then we'll need some way to run a bit of code when a component first appears on screen.\footnote{This is \href{https://medium.com/@mahcloud/actions-in-the-constructor-or-componentdidmount-be3720e4a9a6}{subtly different} from when it first gets created in code, \texttt{constructor}}
+\\
+
+We can do this using the \texttt{componentDidMount} ``Lifecycle method''. This method is called for us by React when the component first renders, so any code we put in it will run when a component is rendered on screen:\footnote{If a component is removed and then re-added, the \texttt{componentDidMount} method will run again.}
+
+\inputminted{js}{05/figures/01-StarWarsFolks.jsx}
+
+If it's not doing what you expect, you can use the \href{https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor}{``Network'' tab in Developer Tools} to see if your API requests are working or not.
 
 
 \section{Additional Resources}
 
 \begin{itemize}[leftmargin=*]
+    \item \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise}{MDN: Promises}
+    \item \href{http://exploringjs.com/es6/ch_promises.html}{Promises: A Technical Look}
+    \item \href{https://github.com/axios/axios}{Axios}
     \item \href{https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/}{How To Make HTTP Requests Like a Pro with Axios}
+    \item \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function}{MDN: \texttt{async} functions}
+    \item \href{https://reactjs.org/docs/react-component.html#componentdidmount}{Lifecycle Methods: \texttt{componentDidMount}}
 \end{itemize}
