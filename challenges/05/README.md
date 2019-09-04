@@ -6,7 +6,7 @@ Make sure you keep React DevTools + JS console open at all times and correct any
 
 ## APIs with React
 
-For all of these challenges use the `restful.training` API that you worked with in the Laravel week.
+For all of these challenges use the [`restful.training`](https://github.com/develop-me/restful.training) API that you worked with in the Laravel week.
 
 These challenges all involve making a `GET` request when a component first loads. You should show a loading message until you get back a response:
 

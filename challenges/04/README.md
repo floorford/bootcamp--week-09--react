@@ -8,8 +8,10 @@ Make sure you keep React DevTools + JS console open at all times and correct any
 
 **Make sure you use the standard rules for URL style: all lower-case with hyphens between words**
 
-- Update your app with three `<Route>`s to different URLs for components that don't require props
-- Update your app with three `<Route>`s to different URLs for components that *do* require props
+Rather than displaying all your components at once inside `<Stuff>`, use routing in `<App>` to only show specific components:
+
+- Update your app with a few `<Route>`s to different URLs for components that don't require props
+- Update your app with a few `<Route>`s to different URLs for components that *do* require props
 - Create a component containing `<Link>`s to the components you've routed to and then include it at the bottom of every page
 - Make sure that 404s are handled properly
 - Create a route `/squares/:colour` which will show your `Squares` component using the colour provided in the URL
