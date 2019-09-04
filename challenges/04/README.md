@@ -12,7 +12,7 @@ Rather than displaying all your components at once inside `<Stuff>`, use routing
 
 - Update your app with a few `<Route>`s to different URLs for components that don't require props
 - Update your app with a few `<Route>`s to different URLs for components that *do* require props
-- Create a component containing `<Link>`s to the components you've routed to and then include it at the bottom of every page
+- Create a component `<Footer>` containing a list of links to the components you've routed to and then include it at the bottom of every page. Make sure the page doesn't do a full refresh when the links are clicked.
 - Make sure that 404s are handled properly
 - Create a route `/squares/:colour` which will show your `Squares` component using the colour provided in the URL
 - Create a route `/steps/:max/:step` which will show your `StepCounter` component using the values of `max` and `step` given in the URL
