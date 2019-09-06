@@ -20,7 +20,7 @@ Make sure you keep the JS console open at all times and correct anything that it
     // your component here
     ```
 
-- Create a component `<Stuff>` and then use it in your `<App>` component:
+- Create a component `<Stuff>` that includes all of the components so far and then use it in your `<App>` component:
 
     ```jsx
     <React.Fragment>

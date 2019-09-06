@@ -3,9 +3,9 @@ import React from "react";
 const Square = ({ selected, handleClick, colour }) => (
     <div
         style={{
-            width: "200px",
-            height: "200px",
-            background: selected ? colour : "#000",
+            width: 200,
+            height: 200,
+            background: selected ? colour : "red",
         }}
         onClick={ handleClick }
     />

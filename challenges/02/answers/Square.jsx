@@ -5,7 +5,7 @@ class Square extends Component {
         super(props);
 
         this.state = {
-            black: true,
+            red: true,
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -13,19 +13,19 @@ class Square extends Component {
 
     handleClick() {
         this.setState({
-            black: !this.state.black,
+            red: !this.state.red,
         });
     }
 
     render() {
-        let colour = this.state.black ? "#000" : this.props.colour;
+        let colour = this.state.red ? "red" : this.props.colour;
 
         return (
             <div
                 onClick={ this.handleClick }
                 style={{
-                    height: "200px",
-                    width: "200px",
+                    height: 200,
+                    width: 200,
                     background: colour,
                 }}
             />

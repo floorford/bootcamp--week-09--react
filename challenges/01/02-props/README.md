@@ -12,7 +12,7 @@ Make sure you keep the JS console open at all times and correct anything that it
 
 - Update your `<Square>` component so that it can accept a `colour` prop, which will change the background colour of the square. Also add a default value for `colour`.
 
-- Update your `<People>` component so that it can accept an array of names with a `names` prop. If no names are passed in it should display: "Nothing to see here"
+- Update your `<People>` component so that it can accept an array of names with a `names` prop. If no names are passed in it should display a paragraph saying: "Nothing to see here"
 
 - Update your `<Stuff>` component so that it can accept a `square` prop, which will determine whether the `<Square>` component is displayed or not. This prop should default to `true`.
 

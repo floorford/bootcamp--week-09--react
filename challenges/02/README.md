@@ -20,7 +20,7 @@ The following questions require state:
 
 1) Create a `<Clicked>` component. It should initially display "Not clicked" in a `<p>`. Once it's been clicked it should change to "Clicked".
 
-2) Update your `<Square colour="hotpink">` component so that the background starts black, but when it is clicked it changes to the passed in colour. It should alternate every time you click.
+2) Update your `<Square colour="hotpink">` component so that the background starts red, but when it is clicked it changes to the passed in colour. It should alternate every time you click.
 
 3) Create `<ToggleText initial="Hello" alternate="World">` component. It should consist of a `<p>` and a `<button>Toggle</button>`. When the `<button>` is clicked the text of the `<p>` tag should alternate between `initial` and `alternate`.
 
