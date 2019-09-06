@@ -7,7 +7,7 @@ const Content = () => (
         <p className="lead">This app is the best</p>
         <img className="img-thumbnail" alt="A cat" src="https://goo.gl/tRdW93" />
         <p className="alert alert-success">
-      If you'd like to fund us for £500k+, please get in touch
+            If you'd like to fund us for £500k+, please get in touch
         </p>
     </main>
 );

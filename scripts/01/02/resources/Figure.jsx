@@ -10,7 +10,7 @@ const Figure = () => (
             />
         </div>
         <figcaption className="panel-footer">
-      A cat, strutting its stuff!
+            A cat, strutting its stuff!
         </figcaption>
     </figure>
 );
