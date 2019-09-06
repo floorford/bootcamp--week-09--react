@@ -1,5 +1,10 @@
 ## To Do
 
+- Switch to `.js` instead of `.jsx`
+    * [ ] Add a note about Sublime Text support
+    * [ ] Challanges
+    * [ ] Notes
+    * [ ] Scripts
 - Where stuff goes in component
     * [ ] JSX in render
     * [ ] State manipulation in handler methods
@@ -29,6 +34,9 @@
     * [ ] Methods
     * [ ] Properties?
 - Update to use Bootstrap 4
+
+## Doing
+
 
 ## Done
 
