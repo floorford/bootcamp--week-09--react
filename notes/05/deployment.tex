@@ -1,0 +1,13 @@
+\section{React deployment}
+
+As a static site you can deploy a React app to GitHub Pages (GitHub hosts your site from your repo).
+
+\begin{itemize}
+    \item Install the package needed: \texttt{npm install gh-pages}
+    \item Add \texttt{"homepage": "https://{GitHub username}.github.io/{project name}/} to your \texttt{package.json} file.
+    \item Add \texttt{"predeploy": "npm run build"} to your \texttt{package.json} in the \texttt{"scripts"} object.
+    \item Add \texttt{"deploy": "gh-pages -d build"} to your \texttt{package.json} in the \texttt{"scripts"} object.
+    \item Then, when ready to deploy up to GitHub Pages: \texttt{npm run deploy}
+    \item Wait. The first deployment will be fast, but future deployments can take up to 10 minutes.
+    \item Visit https://{github username}.github.io/{project name}/ to view your React app
+\end{itemize}
