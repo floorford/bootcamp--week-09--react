@@ -33,4 +33,4 @@ Make sure you keep the JS console open at all times and correct anything that it
 
 ## Tricksy
 
-- Recreate [`appify-me.html`](https://htmlpreview.github.io/?https://github.com/develop-me/week-09--react/blob/master/challenges/01/01-jsx/appify-me.html) using JSX components. Break the different sections of the site up into small components so that they don't become unmanageable - but don't get **too** carried away.
+- Recreate [`appify-me.html`](https://develop-me.github.io/week-09--react/challenges/01/01-jsx/appify-me.html) using JSX components. Break the different sections of the site up into small components so that they don't become unmanageable - but don't get **too** carried away.
