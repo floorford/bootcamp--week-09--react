@@ -1,13 +1,22 @@
-\section{React deployment}
+If you've used \texttt{npm init react-app}, you can simply run \texttt{npm build} to create a copy of your site that you can run on any server. It will create a directory called \texttt{build} that contains an \texttt{index.html} file and the fully compressed and transpiled JS.
+\\
+
+You'll need to rerun \texttt{npm build} every time you want to publish a new version of the site - it doesn't keep itself up to date.
+\\
+
+You shouldn't add the \texttt{build} directory to Git, as it's easy to recreate by just running \texttt{npm build}.
+
+
+\section{Deploying to GitHub Pages}
 
 As a static site you can deploy a React app to GitHub Pages (GitHub hosts your site from your repo).
 
 \begin{itemize}
     \item Install the package needed: \texttt{npm install gh-pages}
-    \item Add \texttt{"homepage": "https://{GitHub username}.github.io/{project name}/} to your \texttt{package.json} file.
+    \item Add \texttt{"homepage": "https://<github username>.github.io/<repo name>/} to your \texttt{package.json} file.
     \item Add \texttt{"predeploy": "npm run build"} to your \texttt{package.json} in the \texttt{"scripts"} object.
     \item Add \texttt{"deploy": "gh-pages -d build"} to your \texttt{package.json} in the \texttt{"scripts"} object.
-    \item Then, when ready to deploy up to GitHub Pages: \texttt{npm run deploy}
+    \item Then, when ready to deploy to GitHub Pages: \texttt{npm run deploy}
     \item Wait. The first deployment will be fast, but future deployments can take up to 10 minutes.
-    \item Visit https://{github username}.github.io/{project name}/ to view your React app
+    \item Visit \texttt{https://<github username>.github.io/<repo name>/} to view your React app
 \end{itemize}
