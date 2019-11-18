@@ -1,17 +1,18 @@
 import React from "react";
 
 const Figure = () => (
-    <figure className="panel panel-default">
-        <div className="panel-body">
-            <img
-                className="img-thumbnail"
-                alt="A cat, strutting its stuff!"
-                src="https://goo.gl/tRdW93"
-            />
+    <figure className="card">
+        <img
+            className="img-thumbnail"
+            className="card-img-top"
+            alt="A cat, strutting its stuff!"
+            src="https://goo.gl/tRdW93"
+        />
+        <div className="card-body">
+            <figcaption className="card-text">
+                A cat, strutting its stuff!
+            </figcaption>
         </div>
-        <figcaption className="panel-footer">
-            A cat, strutting its stuff!
-        </figcaption>
     </figure>
 );
 
