@@ -3,7 +3,6 @@ import React from "react";
 const Figure = () => (
     <figure className="card">
         <img
-            className="img-thumbnail"
             className="card-img-top"
             alt="A cat, strutting its stuff!"
             src="https://goo.gl/tRdW93"
