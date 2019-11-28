@@ -17,7 +17,7 @@ const App = () => (
     <Router>
         <>
             <Link to="/">
-                <h1 className="page-header">Bloggo Magnifico</h1>
+                <h1>Bloggo Magnifico</h1>
             </Link>
 
             <Switch>

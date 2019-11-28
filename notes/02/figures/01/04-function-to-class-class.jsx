@@ -12,8 +12,9 @@ class Header extends Component {
     // the return of render is exactly the same as what you
     // had in the original function version
     return (
-      <header className="page-header">
-        <h1>{ children } <small>{ subtitle }</small></h1>
+      <header className="jumbotron">
+        <h1>{ children }</h1>
+        <p>{ subtitle }</p>
       </header>
     );
   }

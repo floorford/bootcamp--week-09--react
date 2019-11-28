@@ -25,7 +25,7 @@ class RollCall extends Component {
 
         return (
             <React.Fragment>
-                <p className="well">{ names[index] }</p>
+                <p className="card card-body">{ names[index] }</p>
                 <button className="btn btn-primary" onClick={ this.handleClick }>Next</button>
             </React.Fragment>
         );

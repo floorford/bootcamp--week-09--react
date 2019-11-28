@@ -2,14 +2,14 @@ import React from "react";
 
 // accept children, no more title prop
 const Header = ({ children, subtitle }) => (
-  <header className="page-header">
+  <header className="jumbotron">
     <h1>
       { /* use children instead of title */}
       { children }
-      { !subtitle ? null :
-        <small style={ { marginLeft: 10 } }>{ subtitle }</small>
-      }
     </h1>
+    { !subtitle ? null :
+      <p>{ subtitle }</p>
+    }
   </header>
 );
 

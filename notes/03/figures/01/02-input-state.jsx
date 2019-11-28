@@ -19,7 +19,7 @@ class Input extends Component {
           name={ this.props.name }
           className="form-control"
         />
-        <p className="help-block">
+        <p className="form-text text-muted">
           Length: { this.state.input.length } characters
         </p>
       </div>

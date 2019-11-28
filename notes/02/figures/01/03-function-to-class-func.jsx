@@ -1,8 +1,9 @@
 import React from "react";
 
 const Header = ({ children, subtitle }) => (
-  <header className="page-header">
-    <h1>{ children } <small>{ subtitle }</small></h1>
+  <header className="jumbotron">
+    <h1>{ children }</h1>
+    <p>{ subtitle }</p>
   </header>
 );
 

@@ -1,14 +1,14 @@
 import React from "react";
 
 const Header = ({ title, subtitle }) => (
-  <header className="page-header">
+  <header className="jumbotron">
     <h1>
       { title }
-      { /* return null if you don't want anything rendered */ }
-      { !subtitle ? null :
-        <small style={ { marginLeft: 10 } }>{ subtitle }</small>
-      }
     </h1>
+    { /* return null if you don't want anything rendered */ }
+    { !subtitle ? null :
+      <p>{ subtitle }</p>
+    }
   </header>
 );
 

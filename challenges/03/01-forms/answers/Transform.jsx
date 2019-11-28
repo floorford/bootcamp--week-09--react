@@ -24,7 +24,7 @@ class Transform extends Component {
         return (
             <React.Fragment>
                 <input className="form-control" onChange={ this.handleChange } value={ value } />
-                <p className="well">{ transform(value) }</p>
+                <p className="card card-body">{ transform(value) }</p>
             </React.Fragment>
         );
     }

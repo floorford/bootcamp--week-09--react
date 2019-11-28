@@ -31,7 +31,7 @@ class StepCounter extends Component {
     render() {
         return (
             <React.Fragment>
-                <p className="well">{ this.state.count }</p>
+                <p className="card card-body">{ this.state.count }</p>
                 <button onClick={ this.handleClickDecrement } className="btn btn-primary">-</button>
                 <button onClick={ this.handleClickIncrement } className="btn btn-primary">+</button>
             </React.Fragment>
