@@ -8,8 +8,8 @@ const Pagination = () => (
         { /* use map to output an <li> for each */ }
         { /* item in the array */ }
         { numbers.map((value, index) => (
-            <li key={ index }>
-                <a href={ "/page/" + value }>{ value }</a>
+            <li className="page-item" key={ index }>
+                <a className="page-link" href={ "/page/" + value }>{ value }</a>
             </li>
         ))}
     </ul>
