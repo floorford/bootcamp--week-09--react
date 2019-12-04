@@ -72,18 +72,18 @@ A \texttt{<Figure>} component requires specific props in order to work, so we ne
 
 \pagebreak
 
-We need to use \texttt{<Route>}'s \texttt{render} prop:
+To do this we can wrap a component with a \texttt{<Route>}:
 
 \begin{minted}{jsx}
-    <Route path="/figure" render={ () => (
+    <Route path="/figure">
         <Figure
             caption="A cat, strutting its stuff!"
             src="https://goo.gl/tRdW93"
         />
-    ) } />
+    </Route>
 \end{minted}
 
-\texttt{render} lets us pass in a function that returns a fully formed component \textit{including} props.
+This lets us pass in a fully formed component \textit{including} props.
 
 
 
@@ -98,7 +98,7 @@ Say we had a list of articles and we wanted to show the user one specific articl
     \item \&c.
 \end{itemize}
 
-We can reproduce this using ReactRouter's \texttt{match} property:
+We can reproduce this using ReactRouter's \texttt{render} prop and the \texttt{match} property:
 
 \begin{minted}{jsx}
     <Route path="/articles/:id" render={ ({ match }) => (
