@@ -1,12 +1,18 @@
 # Challenges
 
-**Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
+- **Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
 
-Make sure you keep React DevTools + JS console open at all times and correct anything that it flags up.
+- Make sure you keep React DevTools ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)/[Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)) + JS console open at all times and correct anything that it flags up.
 
 ---
 
 - Change the `<Header>` and `<Paragraph>` back to stateless components. If you've been using Git, this [shouldn't take very long](https://git-scm.com/docs/git-revert).
+
+---
+
+All of the following challenges will require more than one component. You may want to create a directory per challenge.
+
+You might also find it easier to create them as a *single component* first and then to break out the repeated sub-component once you've got it working.
 
 - Create a component `<Squares color="hotpink">` that displays two of your `<Square>` components and passes through the `color` prop. As before, when clicked the background colour should change. But only one of the `<Square>`s should show the given colour at once. You'll need to turn your squares back into stateless components.
 

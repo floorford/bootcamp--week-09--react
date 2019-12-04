@@ -20,7 +20,7 @@ class Length extends Component {
         let { value } = this.state;
 
         return (
-            <div className="form-group">
+            <div className="form-group mt-4">
                 <input className="form-control" onChange={ this.handleChange } value={ value } />
                 <p className="help-block">Length: { value.length }</p>
             </div>

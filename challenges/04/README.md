@@ -1,8 +1,8 @@
 # Challenges
 
-**Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
+- **Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
 
-Make sure you keep React DevTools + JS console open at all times and correct anything that it flags up.
+- Make sure you keep React DevTools ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)/[Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)) + JS console open at all times and correct anything that it flags up.
 
 ## ReactRouter
 

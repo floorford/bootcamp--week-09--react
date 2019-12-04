@@ -29,9 +29,9 @@ class Adder extends Component {
     render() {
         return (
             <React.Fragment>
-                <form className="form-group">
+                <form className="form-group mt-4">
                     <input type="number" className="form-control" onChange={ this.handleChange } value={ this.state.value } />
-                    <button onClick={ this.handleClickAdd } className="btn btn-primary">Add</button>
+                    <button onClick={ this.handleClickAdd } className="btn btn-primary mt-4">Add</button>
                 </form>
                 <ul className="list-group">
                     { this.state.values.map((item, i) => (

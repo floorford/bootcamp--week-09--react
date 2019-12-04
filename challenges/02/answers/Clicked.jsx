@@ -17,7 +17,7 @@ class Clicked extends Component {
 
     render() {
         return (
-            <p onClick={ this.handleClick }>{ this.state.clicked ? "Clicked" : "Not clicked" }</p>
+            <p className="alert alert-primary mt-4" onClick={ this.handleClick }>{ this.state.clicked ? "Clicked" : "Not clicked" }</p>
         );
     }
 }

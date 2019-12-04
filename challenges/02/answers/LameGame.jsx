@@ -45,14 +45,17 @@ class LameGame extends Component {
 
         return (
             <React.Fragment>
-                <p className="card card-body">{ aim } seconds</p>
-                <div style={{ marginBottom: "1em" }}>
-                    { playing ? (
-                        <button className="btn btn-primary" onClick={ this.handleClickFinish }>Finish</button>
-                    ) : (
-                        <button className="btn btn-primary" onClick={ this.handleClickStart }>Start</button>
-                    )}
+                <div className="card mb-4">
+                    <h5 className="card-header">Aim</h5>
+                    <p className="card-body card-text">{ aim } seconds</p>
                 </div>
+
+                { playing ? (
+                    <button className="btn btn-primary mb-4" onClick={ this.handleClickFinish }>Finish</button>
+                ) : (
+                    <button className="btn btn-primary mb-4" onClick={ this.handleClickStart }>Start</button>
+                )}
+
                 { start && finish ? <p className="alert alert-info">{ this.calculateDifference() }</p> : null }
             </React.Fragment>
         );

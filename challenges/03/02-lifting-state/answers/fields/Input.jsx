@@ -1,15 +1,14 @@
 import React from "react";
 
 const Input = ({ valid, label, handleChange, value }) => (
-    <div className={ "form-group" + (valid ? "" : " has-error")}>
+    <div className="form-group">
         <label>{ label }</label>
         <input
-            type="password"
-            className="form-control"
+            className={ "form-control" + (valid ? "" : " is-invalid")}
             value={ value }
             onChange={ handleChange }
         />
-        { valid ? null : <p className="help-block">Field required</p> }
+        { valid ? null : <p className="invalid-feedback">{ label } is required</p> }
     </div>
 );
 

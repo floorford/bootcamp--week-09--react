@@ -5,7 +5,7 @@ const Square = ({ selected, handleClick, colour }) => (
         style={{
             width: 200,
             height: 200,
-            background: selected ? colour : "red",
+            background: selected ? colour : "green",
         }}
         onClick={ handleClick }
     />

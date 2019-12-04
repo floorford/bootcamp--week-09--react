@@ -1,10 +1,10 @@
 # Challenges
 
-**Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
+- **Use Git to make a commit every time you get an answer working. Use sensible commit messages.**
 
-For some of these challenges you may want to create more than one component type. Try not to let your JSX get too unwieldy. Create new directories if you're using multiple component types.
+- For some of these challenges you may want to create more than one component type. Try not to let your JSX get too unwieldy. Create new directories if you're using multiple component types.
 
-Make sure you keep React DevTools + JS console open at all times and correct anything that it flags up.
+- Make sure you keep React DevTools ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)/[Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)) + JS console open at all times and correct anything that it flags up.
 
 ---
 
@@ -20,7 +20,7 @@ The following questions require state:
 
 1) Create a `<Clicked>` component. It should initially display "Not clicked" in a `<p>`. Once it's been clicked it should change to "Clicked".
 
-2) Update your `<Square colour="hotpink">` component so that the background starts red, but when it is clicked it changes to the passed in colour. It should alternate every time you click.
+2) Update your `<Square colour="hotpink">` component so that the background starts green, but when it is clicked it changes to the passed in colour. It should alternate every time you click.
 
 3) Create `<ToggleText initial="Hello" alternate="World">` component. It should consist of a `<p>` and a `<button>Toggle</button>`. When the `<button>` is clicked the text of the `<p>` tag should alternate between `initial` and `alternate`.
 
