@@ -35,6 +35,9 @@ Remember to install React Bootstrap (`npm install react-bootstrap`) before start
 
 6) Use [React DatePicker](https://github.com/Hacker0x01/react-datepicker/) to create a component `<Dates>`. It should have two date pickers and a React Bootstrap `<Alert>`. The alert should show the number of days between the two dates.
 
+    ![Dates](img/Dates.gif)
+
+
 7) Use [React Image](https://jossmac.github.io/react-images/) to create a carousel that uses the following images:
 
     ```
@@ -42,6 +45,13 @@ Remember to install React Bootstrap (`npm install react-bootstrap`) before start
     https://cutt.ly/ee3x2lR
     https://cutt.ly/re3x2LP
     ```
+
+    ![Images](img/Images.gif)
+
+
+8) Use [React Color](http://casesandberg.github.io/react-color/) to create a `<Headline>` component with a `message` prop. It should display the message with *massive* lettering. When you click on the headline it should show a colour picker. When you select a colour the text colour of the message should change.
+
+    ![Headline](img/Headline.gif)
 
 
 ## Tricksy
@@ -60,13 +70,19 @@ handleBlah(...args) {
 
 - use [React TimeKeeper](https://catc.github.io/react-timekeeper/) to create a `<Times>` component. It should have two time keepers. There should also be a React Bootstrap `<Alert>` component at the bottom. If the two times match then the alert should be green and display "Same!". If they do not match the alert should be red and display "Different!".
 
+    ![Times](img/Times.gif)
+
 - Use [React MarkDown Editor](https://github.com/uiwjs/react-md-editor) to create a `<MarkDown>` component that displays a MarkDown editor and a MarkDown preview. The editor should have the `preview` prop set to `edit`.  The preview should be wrapped in a React Bootstrap `<Card>` component.
+
+    ![MarkDown](img/MarkDown.gif)
 
 ---
 
 This next one's tricky because the documentation isn't all that great. You can view code examples by clicking on the little source-code icon.
 
 - Use [React Select](https://react-select.com/home) to create a component `<Selector>` that has an `animals` prop that you pass an array of animal names. When you select an animal it should display in a Bootstrap `<Alert>` component: "Favourite Animals: *selected animal*".
+
+    ![Selector](img/Selector.gif)
 
 
 ---
