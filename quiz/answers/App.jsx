@@ -9,6 +9,8 @@ import EvenClicks from "./EvenClicks";
 import CountBy from "./CountBy";
 import HideMe from "./HideMe";
 import MinimumLength from "./MinimumLength";
+import AnimalFactsRandom from "./animal-facts/Random";
+import AnimalFactsPost from "./animal-facts/Post";
 import Posts from "./posts/Posts";
 
 const App = () => (
@@ -16,6 +18,8 @@ const App = () => (
         <div>
             <h1>My App</h1>
             <Route exact path="/" component={ Posts } />
+            <Route path="/animal-facts/random" component={ AnimalFactsRandom } />
+            <Route path="/animal-facts/new" component={ AnimalFactsPost } />
             <Route path="/even-clicks" component={ EvenClicks } />
             <Route path="/hide-me" render={ () => (
                 <HideMe>Top secret stuff</HideMe>

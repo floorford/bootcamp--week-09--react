@@ -13,7 +13,7 @@
 
 *Use `npm init react-app` to make a new React app called `quiz` for the following challenges.*
 
-Add the Bootstrap CSS file and try to use Bootstrap styling where appropriate.
+Add the Bootstrap 4 CSS file and use Bootstrap styling where appropriate.
 
 ## Questions
 
@@ -40,6 +40,29 @@ Add the Bootstrap CSS file and try to use Bootstrap styling where appropriate.
 
 - Visiting `/multiplier/20/30` uses `<Multiplier>` and displays the result of 20×30 (it should work for any values in the URL)
 
+
+## React Bootstrap
+
+Update your components to use React Bootstrap components where appropriate.
+
+
+## API Request
+
+[`restful.training`](https://github.com/develop-me/restful.training#animal-facts) has an "Animal Facts" API. (You'll need the password `wsYZzT8_m_pwBNDjSk77` to sign-up if you've lost your login.)
+
+Put these components in an `animal-facts` directory inside `src`.
+
+Use React Bootstrap where appropriate.
+
+- Create a `<Random>` component that displays a random animal fact in a `<Card>`. If the fact is made up then display it in a red box, otherwise display it in a green box.
+
+    ![Random](img/AFRandom.png)
+
+- Create a `<Post>` component that posts an animal fact. It should have a textarea with a maximum length of 255 and a checkbox for whether the fact is made up or not. Make sure the user doesn't submit an empty fact. Once the fact is submitted it should show an appropriate message.
+
+    **Any facts you add will appear in other people's apps, so don't write anything you wouldn't want to share**
+
+    ![Random](img/AFPost.gif)
 
 ## Tricksy
 
