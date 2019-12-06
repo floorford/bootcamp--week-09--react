@@ -15,7 +15,7 @@
 
 Add the Bootstrap 4 CSS file and use Bootstrap styling where appropriate.
 
-## Questions
+### Components
 
 - Create a component `<Multiplier x={ 5 } y={ 7 } />` that takes two props, `x` and `y`, and outputs their product (i.e. x × y) in a `<p>`.
 
@@ -28,7 +28,7 @@ Add the Bootstrap 4 CSS file and use Bootstrap styling where appropriate.
 - Create a component `<MinimumLength length={ 30 }>` that contains an `<input>`. The user should see a warning, "Too short!", unless they have entered at least `length` characters.
 
 
-## ReactRouter
+### ReactRouter
 
 - Visiting `/even-clicks` shows `<EvenClicks>`
 
@@ -41,12 +41,12 @@ Add the Bootstrap 4 CSS file and use Bootstrap styling where appropriate.
 - Visiting `/multiplier/20/30` uses `<Multiplier>` and displays the result of 20×30 (it should work for any values in the URL)
 
 
-## React Bootstrap
+### React Bootstrap
 
 Update your components to use React Bootstrap components where appropriate.
 
 
-## API Request
+### API Requests
 
 [`restful.training`](https://github.com/develop-me/restful.training#animal-facts) has an "Animal Facts" API. (You'll need the password `wsYZzT8_m_pwBNDjSk77` to sign-up if you've lost your login.)
 
@@ -64,7 +64,7 @@ Use React Bootstrap where appropriate.
 
     ![Random](img/AFPost.gif)
 
-## Tricksy
+### Tricksy: Lifting State & Passing Data Up
 
 Create a component `<Posts>` that consists of a list of items that have a title and some text. Underneath the list of items should be a `<Form>` component that has a "Title" and "Text" input and a "Submit" button.
 
