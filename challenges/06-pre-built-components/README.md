@@ -38,7 +38,7 @@ Remember to install React Bootstrap (`npm install react-bootstrap`) before start
     ![Dates](img/Dates.gif)
 
 
-7) Use [React Image](https://jossmac.github.io/react-images/) to create a carousel that uses the following images:
+7) Use [React Images](https://jossmac.github.io/react-images/) to create a carousel that uses the following images:
 
     ```
     https://cutt.ly/ke3x2y5
