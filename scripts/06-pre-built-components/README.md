@@ -11,9 +11,11 @@
 
 - include Bootstrap CSS file
 - `npm install react-bootstrap`
+- Demonstrate basic `<Button>` with `variant`
 - Documentation is key
-- Redo `<Figure>` with BS
 - DOM props get passed through
+- Add an `onClick` handler to `<Button>`
+- Redo `<Figure>` with BS
 - Mention React Native
 
 
