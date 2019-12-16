@@ -11,10 +11,9 @@
 
 - include Bootstrap CSS file
 - `npm install react-bootstrap`
-- `<Button variant="primary">Button</Button>`
 - Documentation is key
+- Redo `<Figure>` with BS
 - DOM props get passed through
-- redo `<Buttons>` with BS
 - Mention React Native
 
 

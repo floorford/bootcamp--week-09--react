@@ -3,7 +3,7 @@
 ## Structure of the Day
 - Events & State
 
-**Don't mention state until the State section**
+**Don't mention state until the State section!**
 
 ## Events
 - Use `onClick` to make `Header` do something
@@ -17,6 +17,7 @@
 
 ## State
 - Now we've got an object, we can have local state
+- Similar to state with DOM: long lived-variables (because event handlers are short-lived)
 - `this.props` and `this.state`
 - Initial state in the constructor: counter example
 - Just a POJO

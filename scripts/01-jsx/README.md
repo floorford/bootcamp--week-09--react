@@ -1,18 +1,5 @@
 # Day 1: Morning
 
-**Uninstall `yarn`**
-
-## Structure of Week
-- React, JSX, Props
-- State
-- Forms & Advanced State
-- React Router
-
-## Structure of Day
-- What is React?
-- JSX - templating language
-- Props - passing data
-
 ## JS Recap
 
 - Types of things
@@ -38,6 +25,7 @@
 - For building UIs
 - Not a framework
 - Also be using Axios, Redux, ReactRouter
+- Can't built a full app until we learn Redux, so for now just building stand-alone components
 - Overkill to use for basic websites
 
 ### Scaffolding
@@ -49,6 +37,7 @@
 - Quickly look at directory structure
 
 ### JSX
+- **Emphasise that we're still just doing JavaScript**: JSX is on top of it
 - Components: one per UI element
 - Components can have sub-components
 - Top level component: `App` in this setup
