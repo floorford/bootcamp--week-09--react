@@ -1,5 +1,8 @@
 ## To Do
 
+- More React Router information
+    * [ ] Hash router for deployment
+    * [ ] Routes inside non-App components
 - Switch to `.js` instead of `.jsx`
     * [ ] Add a note about Sublime Text support
     * [ ] Challanges
