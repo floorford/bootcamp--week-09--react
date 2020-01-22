@@ -1,5 +1,7 @@
 ## To Do
 
+- Avoid derived state
+    > Shouldn't copy props into state - check examples/challenges - form ones in particular. See: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 - More React Router information
     * [ ] Hash router for deployment
     * [ ] Routes inside non-App components
@@ -46,3 +48,4 @@
 - Update to using `<>` instead of `React.Fragment`
 - Update answers/example to use handleX instead of onX when passing around functions
 - For state have some challenges that just turn stateless into stateful components - maybe some more simple challenges
+- Deployment Guide

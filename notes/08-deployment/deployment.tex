@@ -1,0 +1,45 @@
+You can deploy you React site to GitHub pages easily.
+\\
+
+We'll use an NPM package called \texttt{gh-pages} to make our lives easier.
+
+\section{Setup}
+
+First, install the \texttt{gh-pages} package
+
+\begin{minted}{bash}
+    npm install gh-pages
+\end{minted}
+
+Next, update the \texttt{homepage} property in your \texttt{package.json}:
+
+\begin{minted}{json}
+    "homepage": "https://username.github.io/repo",
+\end{minted}
+
+Then add the following two lines to the \texttt{scripts} object in your \texttt{package.json}:
+
+\begin{minted}{json}
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+\end{minted}
+
+
+\pagebreak
+
+
+\section{Deploying}
+
+Whenever you want to update your site run:
+
+\begin{minted}{bash}
+    npm run deploy
+\end{minted}
+
+If your forget to do this, it won't update!
+\\
+
+Deployment can take a minute or two sometimes. You can go to \\ \texttt{https://github.com/username/repo/deployments} to see if a deployment is in progress.
+\\
+
+Once deployment is done, you can visit:\\ \texttt{https://username.github.io/repo/}
