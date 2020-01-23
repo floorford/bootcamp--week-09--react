@@ -9,7 +9,7 @@
 
 - `npm install gh-pages`
 - In `package.json`:
-    - `"homepage": "https://username.github.io/repo",`
+    - `"homepage": "https://<github-username>.github.io/<repo>/",`
     - Add to `scripts` property:
        ```json
        "scripts": {
@@ -21,5 +21,5 @@
 ## Deploying
 
 - `npm run deploy`
-- Check status: `https://github.com/username/repo/deployments`
-- Go to site: `https://username.github.io/repo/`
+- Check status: `https://github.com/<github-username>/<repo>/deployments`
+- Go to site: `https://<github-username>.github.io/<repo>/`
