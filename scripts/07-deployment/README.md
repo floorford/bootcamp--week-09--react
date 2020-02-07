@@ -5,7 +5,7 @@
 - GitHub pages: free hosting of static sites
 - NPM package: `gh-pages`
 
-## Setup
+## Setup [10 mins]
 
 - `npm install gh-pages`
 - In `package.json`:

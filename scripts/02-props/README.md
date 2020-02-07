@@ -1,6 +1,7 @@
 # Day 1: Afternoon
 
-## Props
+## Props [40 mins]
+
 - Not reusable
 - Show `Figure` component
 - Image and caption hard-coded
