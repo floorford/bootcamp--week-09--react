@@ -23,3 +23,8 @@
 - `npm run deploy`
 - Check status: `https://github.com/<github-username>/<repo>/deployments`
 - Go to site: `https://<github-username>.github.io/<repo>/`
+
+### `<HashRouter>`
+
+- Update `BrowserRouter` to `HashRouter` in `App` imports
+- Demonstrate hash URLs with a `<Link>`
