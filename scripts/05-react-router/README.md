@@ -1,9 +1,7 @@
-# Day 4
+# Day 3: Afternoon
 
-## Structure of Day
-- Routing
+## ReactRouter [30 mins]
 
-## ReactRouter
 - Takes URL, runs some code
 - Setup: `react-router-dom`
 - Import `BrowserRouter as Router` and `Route`
